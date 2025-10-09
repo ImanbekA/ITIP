@@ -1,0 +1,38 @@
+abstract class Book {
+    protected String title;
+    protected String author;
+    protected int year;
+    private static int bookCount = 0;
+    public Book(String title, String author, int year) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        bookCount++;
+    }
+    public abstract void displayInfo();
+    public String getTitle() {
+        return title;
+    }
+    public void setTitle(String title) {
+        this.title = title;
+    }
+    public String getAuthor() {
+        return author;
+    }
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+    public int getYear() {
+        return year;
+    }
+    public void setYear(int year) {
+        this.year = year;
+    }
+    public static int getBookCount() {
+        return bookCount;
+    }
+    @Override
+    public String toString() {
+        return "Название: " + title + "\nАвтор: " + author + "\nГод: " + year;
+    }
+}
